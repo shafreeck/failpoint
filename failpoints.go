@@ -252,7 +252,8 @@ func Eval(failpath string) (Value, error) {
 		err != ErrDisabled &&
 		err != ErrNotExist &&
 		err != ErrNoHook &&
-		err != ErrNoContext {
+		err != ErrNoContext &&
+		err != ErrFiltered {
 		fmt.Println(err)
 	}
 	return val, err
